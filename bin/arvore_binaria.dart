@@ -8,10 +8,10 @@ void main(List<String> arguments) {
   tree.insertNode(Node(value: 25), tree.getNode());
   tree.insertNode(Node(value: 65), tree.getNode());
 
-  print('InOrder');
+  print('InOrder LNR');
   tree.inOrder(tree.getNode());
-  print('\n PosOrder');
+  print('\n PosOrder LRN');
   tree.posOrder(tree.getNode());
-  print('\n PreOrder');
+  print('\n PreOrder NLR');
   tree.preOrder(tree.getNode());
 }

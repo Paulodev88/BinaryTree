@@ -45,10 +45,11 @@ class BinaryTree {
   void preOrder(Node? root) {
     if (root == null) {
       return;
+    } else {
+      print(' ${root.value} ');
+      preOrder(root.left);
+      preOrder(root.right);
     }
-    print(' ${root.value} ');
-    inOrder(root.left);
-    inOrder(root.right);
   }
 
   ///Print node LRN
@@ -56,8 +57,8 @@ class BinaryTree {
     if (root == null) {
       return;
     }
-    inOrder(root.left);
-    inOrder(root.right);
+    posOrder(root.left);
+    posOrder(root.right);
     print(' ${root.value} ');
   }
 }
