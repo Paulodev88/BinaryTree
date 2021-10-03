@@ -61,4 +61,22 @@ class BinaryTree {
     posOrder(root.right);
     print(' ${root.value} ');
   }
+
+  void isExist(int value) {
+    isExistRecursive(root, value);
+  }
+
+  void isExistRecursive(Node? node, int value) {
+    if (node != null) {
+      if (node.value == value) {
+        print('O nó $value existe na Árvore');
+      } else if (value < node.value) {
+        isExistRecursive(node.left, value);
+      } else if (value > node.value) {
+        isExistRecursive(node.right, value);
+      }
+    } else {
+      print('O nó $value não existe na Árvore');
+    }
+  }
 }

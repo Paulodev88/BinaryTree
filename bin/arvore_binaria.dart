@@ -14,4 +14,9 @@ void main(List<String> arguments) {
   tree.posOrder(tree.getNode());
   print('\n PreOrder NLR');
   tree.preOrder(tree.getNode());
+
+  tree.isExist(30);
+  tree.isExist(31);
+  tree.isExist(65);
+  tree.isExist(66);
 }
