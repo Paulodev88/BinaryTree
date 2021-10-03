@@ -3,20 +3,12 @@ import 'package:arvore_binaria/classes/classes.dart';
 void main(List<String> arguments) {
   BinaryTree tree = BinaryTree(root: Node(value: 50));
 
-  tree.insertNode(Node(value: 30), tree.getNode());
-  tree.insertNode(Node(value: 60), tree.getNode());
-  tree.insertNode(Node(value: 25), tree.getNode());
-  tree.insertNode(Node(value: 65), tree.getNode());
+  tree.insertNode(Node(value: 40), tree.getNode());
+  tree.insertNode(Node(value: 45), tree.getNode());
+  tree.insertNode(Node(value: 55), tree.getNode());
+  tree.insertNode(Node(value: 47), tree.getNode());
+  tree.insertNode(Node(value: 42), tree.getNode());
 
-  print('InOrder LNR');
-  tree.inOrder(tree.getNode());
-  print('\n PosOrder LRN');
-  tree.posOrder(tree.getNode());
-  print('\n PreOrder NLR');
-  tree.preOrder(tree.getNode());
-
-  tree.isExist(30);
-  tree.isExist(31);
-  tree.isExist(65);
-  tree.isExist(66);
+  tree.getDegree(45);
+  tree.isExist(42);
 }

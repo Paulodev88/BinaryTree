@@ -62,15 +62,14 @@ class BinaryTree {
     print(' ${root.value} ');
   }
 
-  Node? isExist(int value) {
-    return isExistRecursive(root, value);
+  void isExist(int value) {
+    isExistRecursive(root, value);
   }
 
-  Node? isExistRecursive(Node? node, int value) {
+  void isExistRecursive(Node? node, int value) {
     if (node != null) {
       if (node.value == value) {
         print('O nó $value existe na Árvore');
-        return node;
       } else if (value < node.value) {
         isExistRecursive(node.left, value);
       } else if (value > node.value) {
@@ -78,7 +77,30 @@ class BinaryTree {
       }
     } else {
       print('O nó $value não existe na Árvore');
-      return null;
+    }
+  }
+
+  void getDegree(int value) {
+    getDegreeRecursive(root, value);
+  }
+
+  void getDegreeRecursive(Node? nodeFinder, int value) {
+    if (nodeFinder != null) {
+      if (nodeFinder.value == value) {
+        if (nodeFinder.right == null && nodeFinder.left == null) {
+          print('O grau do nó $value é: 0');
+        } else if (nodeFinder.right != null && nodeFinder.left != null) {
+          print('O grau do nó $value é: 2');
+        } else {
+          print('O grau do nó $value é: 1');
+        }
+      } else if (value < nodeFinder.value) {
+        getDegreeRecursive(nodeFinder.left, value);
+      } else if (value > nodeFinder.value) {
+        getDegreeRecursive(nodeFinder.right, value);
+      }
+    } else {
+      print('O nó $value não existe na Árvore');
     }
   }
 }
