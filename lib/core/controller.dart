@@ -111,4 +111,20 @@ class Controller {
     _root.postOrder(_root.getNode());
     print('\n');
   }
+
+  int insertNumber() {
+    int num;
+    try {
+      num = int.parse(stdin.readLineSync()!);
+      return num;
+    } catch (e) {
+      print('Valor informado é inválido');
+      return -1;
+    }
+  }
+
+  void getDegree() {
+    print('\nInforme o valor da nó que deseja ver o grau :');
+    _root.getDegree(insertNumber());
+  }
 }

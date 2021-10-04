@@ -34,6 +34,7 @@ void main(List<String> arguments) {
         controller.getGenerate();
         break;
       case 2:
+        controller.getPostOrder();
         break;
       case 3:
         controller.getPreOrder();
@@ -42,6 +43,7 @@ void main(List<String> arguments) {
         controller.getInOrder();
         break;
       case 5:
+        controller.getDegree();
         break;
       case 6:
         break;
