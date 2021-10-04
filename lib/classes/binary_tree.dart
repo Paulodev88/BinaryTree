@@ -194,4 +194,21 @@ class BinaryTree {
       getDepthRecursive(node.right, value, depth);
     }
   }
+
+  void getCount() {
+    var count = getCountRecursive(root);
+    print('A quantidade de nó da árvore é : $count');
+  }
+
+  int getCountRecursive(Node? node) {
+    if (node!.right == null && node.left == null) {
+      return 1;
+    } else if (node.right == null) {
+      return getCountRecursive(node.left) + 1;
+    } else if (node.left == null) {
+      return getCountRecursive(node.right) + 1;
+    } else {
+      return getCountRecursive(node.left) + getCountRecursive(node.right) + 1;
+    }
+  }
 }
