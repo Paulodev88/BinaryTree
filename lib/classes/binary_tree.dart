@@ -21,12 +21,14 @@ class BinaryTree {
     if (newNode.value > root!.value) {
       if (root.right == null) {
         root.right = newNode;
+        root.right!.father = root;
       } else {
         insertNode(newNode, root.right);
       }
     } else {
       if (root.left == null) {
         root.left = newNode;
+        root.left!.father = root;
       } else {
         insertNode(newNode, root.left);
       }
