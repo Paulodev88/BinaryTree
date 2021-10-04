@@ -64,6 +64,7 @@ void main(List<String> arguments) {
         controller.removeNode();
         break;
       case 12:
+        controller.getReverse();
         break;
       case 0:
         print('Saindo ....');

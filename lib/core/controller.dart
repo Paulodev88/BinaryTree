@@ -156,4 +156,9 @@ class Controller {
     print('\nInforme o valor do nó que deseja excluir da árvore :');
     _root.deleteNode(insertNumber());
   }
+
+  void getReverse() {
+    _root.reverseTree();
+    print('\nOs filhos da sua árvore foram invertidos!!');
+  }
 }
