@@ -58,6 +58,7 @@ void main(List<String> arguments) {
         controller.getCount();
         break;
       case 10:
+        controller.getElement();
         break;
       case 11:
         break;

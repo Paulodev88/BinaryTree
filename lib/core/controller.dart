@@ -146,4 +146,9 @@ class Controller {
   void getCount() {
     _root.getCount();
   }
+
+  void getElement() {
+    print('\nInforme o valor do nó que deseja buscar na árvore :');
+    _root.isExist(insertNumber());
+  }
 }
