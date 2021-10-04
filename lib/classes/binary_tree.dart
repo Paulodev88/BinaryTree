@@ -35,6 +35,42 @@ class BinaryTree {
     }
   }
 
+  void deleteNode(int value) {
+    root = deleteRecursive(root, value)!;
+  }
+
+  Node? deleteRecursive(Node? node, int value) {
+    if (node == null) {
+      return node;
+    }
+    if (value < node.value) {
+      node.left = deleteRecursive(node.left, value);
+    } else if (value > node.value) {
+      node.right = deleteRecursive(node.right, value);
+    } else {
+      if (node.left == null) {
+        return node.right;
+      } else if (node.right == null) {
+        return node.left;
+      }
+      node.value = minValue(node.right);
+
+      node.right = deleteRecursive(node.right, node.value);
+    }
+
+    return node;
+  }
+
+  int minValue(Node? node) {
+    var minval = node!.value;
+
+    while (node!.left != null) {
+      minval = node.left!.value;
+      node = node.left;
+    }
+    return minval;
+  }
+
   ///Print node LNR
   void inOrder(Node? root) {
     if (root == null) {
