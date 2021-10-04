@@ -55,6 +55,7 @@ void main(List<String> arguments) {
         controller.getHeight();
         break;
       case 9:
+        controller.getCount();
         break;
       case 10:
         break;

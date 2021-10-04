@@ -142,4 +142,8 @@ class Controller {
     print('\nInforme o valor do nó que deseja ver a altura :');
     _root.getHeight(insertNumber());
   }
+
+  void getCount() {
+    _root.getCount();
+  }
 }
