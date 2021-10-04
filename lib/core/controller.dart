@@ -105,4 +105,10 @@ class Controller {
     _root.preOrder(_root.getNode());
     print('\n');
   }
+
+  void getPostOrder() {
+    print('\nA árvore em Pre-Order é:');
+    _root.postOrder(_root.getNode());
+    print('\n');
+  }
 }
