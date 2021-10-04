@@ -46,6 +46,7 @@ void main(List<String> arguments) {
         controller.getDegree();
         break;
       case 6:
+        controller.getDepth();
         break;
       case 7:
         break;

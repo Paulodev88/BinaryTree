@@ -124,7 +124,17 @@ class Controller {
   }
 
   void getDegree() {
-    print('\nInforme o valor da nó que deseja ver o grau :');
+    print('\nInforme o valor do nó que deseja ver o grau :');
     _root.getDegree(insertNumber());
+  }
+
+  void getDepth() {
+    print('\nInforme o valor do nó que deseja ver a profundidade :');
+    _root.getDepth(insertNumber());
+  }
+
+  void getNivel() {
+    print('\nInforme o valor do nó que deseja ver o nivel :');
+    _root.getDepth(insertNumber());
   }
 }
