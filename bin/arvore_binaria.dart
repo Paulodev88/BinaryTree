@@ -1,7 +1,10 @@
 import 'dart:io';
 
+import 'package:arvore_binaria/core/core.dart';
+
 void main(List<String> arguments) {
   var choice = -1;
+  Controller controller = Controller();
 
   do {
     print('\n         ::::   Arvóre Genérica   ::::\n');
@@ -28,6 +31,7 @@ void main(List<String> arguments) {
 
     switch (choice) {
       case 1:
+        controller.generate();
         break;
       case 2:
         break;
