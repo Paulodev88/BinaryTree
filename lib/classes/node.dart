@@ -5,7 +5,7 @@
 
 class Node {
   int value;
-  Node? left, right;
+  Node? left, right, father;
 
   Node({required this.value});
 }
