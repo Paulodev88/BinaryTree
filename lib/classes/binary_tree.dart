@@ -81,7 +81,7 @@ class BinaryTree {
     inOrder(root.right);
   }
 
-  ///Print node NLD
+  ///Print node NLR
   void preOrder(Node? root) {
     if (root == null) {
       return;
@@ -209,6 +209,30 @@ class BinaryTree {
       return getCountRecursive(node.right) + 1;
     } else {
       return getCountRecursive(node.left) + getCountRecursive(node.right) + 1;
+    }
+  }
+
+  void reverseTree() {
+    reverseTreeRecursive(root);
+  }
+
+  void reverseTreeRecursive(Node? node) {
+    if (node!.right != null && node.left != null) {
+      Node? newRight = node.left;
+      node.left = node.right;
+      node.right = newRight;
+      reverseTreeRecursive(node.left);
+      reverseTreeRecursive(node.right);
+    } else if (node.left != null) {
+      Node? newLeft = node.right;
+      node.right = node.left;
+      node.left = newLeft;
+      reverseTreeRecursive(node.right);
+    } else if (node.right != null) {
+      Node? newRight = node.left;
+      node.left = node.right;
+      node.right = newRight;
+      reverseTreeRecursive(node.left);
     }
   }
 }

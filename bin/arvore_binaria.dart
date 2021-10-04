@@ -10,10 +10,4 @@ void main(List<String> arguments) {
   tree.insertNode(Node(value: 120), tree.getNode());
   tree.insertNode(Node(value: 103), tree.getNode());
   tree.insertNode(Node(value: 102), tree.getNode());
-
-  tree.getCount();
-
-  tree.deleteNode(110);
-
-  tree.getCount();
 }
