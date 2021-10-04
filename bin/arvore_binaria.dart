@@ -61,6 +61,7 @@ void main(List<String> arguments) {
         controller.getElement();
         break;
       case 11:
+        controller.removeNode();
         break;
       case 12:
         break;

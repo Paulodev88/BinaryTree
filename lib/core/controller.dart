@@ -151,4 +151,9 @@ class Controller {
     print('\nInforme o valor do nó que deseja buscar na árvore :');
     _root.isExist(insertNumber());
   }
+
+  void removeNode() {
+    print('\nInforme o valor do nó que deseja excluir da árvore :');
+    _root.deleteNode(insertNumber());
+  }
 }
