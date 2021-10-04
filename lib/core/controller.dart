@@ -137,4 +137,9 @@ class Controller {
     print('\nInforme o valor do nó que deseja ver o nivel :');
     _root.getDepth(insertNumber());
   }
+
+  void getHeight() {
+    print('\nInforme o valor do nó que deseja ver a altura :');
+    _root.getHeight(insertNumber());
+  }
 }

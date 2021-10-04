@@ -49,8 +49,10 @@ void main(List<String> arguments) {
         controller.getDepth();
         break;
       case 7:
+        controller.getNivel();
         break;
       case 8:
+        controller.getHeight();
         break;
       case 9:
         break;
