@@ -31,14 +31,15 @@ void main(List<String> arguments) {
 
     switch (choice) {
       case 1:
-        controller.generate();
+        controller.getGenerate();
         break;
       case 2:
         break;
       case 3:
+        controller.getPreOrder();
         break;
       case 4:
-        controller.inOrder();
+        controller.getInOrder();
         break;
       case 5:
         break;

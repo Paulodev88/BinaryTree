@@ -57,7 +57,7 @@ class Controller {
     } while (op == 'sim' || op == 's');
   }
 
-  void generate() {
+  void getGenerate() {
     var op = -1;
     do {
       print('\n         ::::   Arvóre Genérica   ::::\n');
@@ -94,9 +94,15 @@ class Controller {
     } while (op != 0);
   }
 
-  void inOrder() {
+  void getInOrder() {
     print('\nA árvore em In-Order é:');
     _root.inOrder(_root.getNode());
+    print('\n');
+  }
+
+  void getPreOrder() {
+    print('\nA árvore em Pre-Order é:');
+    _root.preOrder(_root.getNode());
     print('\n');
   }
 }
