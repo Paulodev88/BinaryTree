@@ -137,4 +137,25 @@ class BinaryTree {
       return math.max(heihtVerify(node.left), heihtVerify(node.right)) + 1;
     }
   }
+
+  void getDepth(int value) {
+    var depth = 0;
+    getDepthRecursive(root, value, depth);
+  }
+
+  void getDepthRecursive(dynamic node, int value, int depth) {
+    if (node == null || node.value == value) {
+      if (node != null) {
+        print('A profundidade do nó $value é : $depth');
+      }
+    }
+    if (node != null) {
+      if (node.value > value) {
+        depth++;
+        getDepthRecursive(node.left, value, depth);
+      }
+      depth++;
+      getDepthRecursive(node.right, value, depth);
+    }
+  }
 }
