@@ -95,6 +95,8 @@ class Controller {
   }
 
   void inOrder() {
+    print('\nA árvore em In-Order é:');
     _root.inOrder(_root.getNode());
+    print('\n');
   }
 }
