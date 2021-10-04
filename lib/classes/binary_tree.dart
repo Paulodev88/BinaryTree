@@ -5,6 +5,8 @@
 
 import 'package:arvore_binaria/classes/classes.dart';
 
+import 'dart:math' as math;
+
 class BinaryTree {
   Node root;
   BinaryTree({
@@ -101,6 +103,36 @@ class BinaryTree {
       }
     } else {
       print('O nó $value não existe na Árvore');
+    }
+  }
+
+  void getHeight(int value) {
+    getHeightRecursive(root, value);
+  }
+
+  void getHeightRecursive(Node? nodeFinder, int value) {
+    if (nodeFinder != null) {
+      if (nodeFinder.value == value) {
+        print('A altura do nó $value é : ${heihtVerify(nodeFinder)}');
+      } else if (value < nodeFinder.value) {
+        getHeightRecursive(nodeFinder.left, value);
+      } else if (value > nodeFinder.value) {
+        getHeightRecursive(nodeFinder.right, value);
+      }
+    } else {
+      print('O nó $value não existe na Árvore');
+    }
+  }
+
+  int heihtVerify(Node? node) {
+    if (node!.right == null && node.left == null) {
+      return 0;
+    } else if (node.right == null) {
+      return heihtVerify(node.left) + 1;
+    } else if (node.left == null) {
+      return heihtVerify(node.right) + 1;
+    } else {
+      return math.max(heihtVerify(node.left), heihtVerify(node.right)) + 1;
     }
   }
 }
