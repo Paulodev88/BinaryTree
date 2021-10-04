@@ -93,4 +93,8 @@ class Controller {
       }
     } while (op != 0);
   }
+
+  void inOrder() {
+    _root.inOrder(_root.getNode());
+  }
 }

@@ -38,6 +38,7 @@ void main(List<String> arguments) {
       case 3:
         break;
       case 4:
+        controller.inOrder();
         break;
       case 5:
         break;
@@ -54,6 +55,9 @@ void main(List<String> arguments) {
       case 11:
         break;
       case 12:
+        break;
+      case 0:
+        print('Saindo ....');
         break;
       default:
         print('Valor digitado não consta no menu, favor digitar outro valor');

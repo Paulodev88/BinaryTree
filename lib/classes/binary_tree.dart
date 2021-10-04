@@ -93,12 +93,12 @@ class BinaryTree {
   }
 
   ///Print node LRN
-  void posOrder(Node? root) {
+  void postOrder(Node? root) {
     if (root == null) {
       return;
     }
-    posOrder(root.left);
-    posOrder(root.right);
+    postOrder(root.left);
+    postOrder(root.right);
     print(' ${root.value} ');
   }
 
