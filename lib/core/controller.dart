@@ -158,7 +158,11 @@ class Controller {
   }
 
   void getReverse() {
-    _root.reverseTree();
+    print('\nA árvore que vai ser invertida em Post-Order');
+    _root.postOrder(_root.getNode());
     print('\nOs filhos da sua árvore foram invertidos!!');
+    _root.reverseTree();
+    print('\nA árvore invertida em Post-Order');
+    _root.postOrder(_root.getNode());
   }
 }
