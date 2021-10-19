@@ -19,22 +19,26 @@ class Controller {
   }
 
   void manualCreate() {
-    print('Informe o valor da RAIZ da Árvore');
+    List<String> nodes = [];
+    List<int> insertNodes = [];
+    print('Informe os nós que deseja inserir na Árvore binária');
 
-    bool success = true;
     try {
-      int num = int.parse(stdin.readLineSync()!);
-      _root = BinaryTree(root: Node(value: num));
+      nodes = stdin.readLineSync()!.split(' ');
     } catch (e) {
       print('Valor informado é inválido');
-      success = false;
     }
 
-    if (success) {
-      insertNode();
-    } else {
-      print('Não foi possível gerar sua Árvore manual!');
-      print('Algo deu errado =/');
+    for (var elements in nodes) {
+      insertNodes.add(int.parse(elements));
+    }
+
+    for (var i = 0; i < nodes.length; i++) {
+      if (i == 0) {
+        _root = BinaryTree(root: Node(value: insertNodes[0]));
+      } else {
+        _root.insertNode(Node(value: insertNodes[i]), _root.getNode());
+      }
     }
   }
 
