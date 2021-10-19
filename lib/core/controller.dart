@@ -165,4 +165,86 @@ class Controller {
     print('\nA árvore invertida em Post-Order');
     _root.postOrder(_root.getNode());
   }
+
+  void insertPosOrder() {
+    List<String> nodes = [];
+    List<int> nodesPosOrder = [];
+    List<int> nodeReverse = [];
+    print('Informe o nó que deseja inserir no percuso Pós Order');
+
+    try {
+      nodes = stdin.readLineSync()!.split(' ');
+    } catch (e) {
+      print('Valor informado é inválido');
+    }
+
+    for (var elements in nodes) {
+      nodesPosOrder.add(int.parse(elements));
+    }
+
+    nodeReverse = nodesPosOrder.reversed.toList();
+    for (var i = 0; i < nodesPosOrder.length; i++) {
+      if (i == 0) {
+        _root = BinaryTree(root: Node(value: nodeReverse[0]));
+      } else {
+        _root.insertNode(Node(value: nodeReverse[i]), _root.getNode());
+      }
+    }
+  }
+
+  void insertPreOrder() {
+    List<String> nodes = [];
+    List<int> nodesPosOrder = [];
+    List<int> nodeReverse = [];
+    print('Informe o nó que deseja inserir no percuso Pre Order');
+
+    try {
+      nodes = stdin.readLineSync()!.split(' ');
+    } catch (e) {
+      print('Valor informado é inválido');
+    }
+
+    for (var elements in nodes) {
+      nodesPosOrder.add(int.parse(elements));
+    }
+
+    nodeReverse = nodesPosOrder.reversed.toList();
+    for (var i = 0; i < nodesPosOrder.length; i++) {
+      if (i == 0) {
+        _root = BinaryTree(root: Node(value: nodeReverse[0]));
+      } else {
+        _root.insertNode(Node(value: nodeReverse[i]), _root.getNode());
+      }
+    }
+  }
+
+  void insertInOrder() {
+    List<String> nodes = [];
+    List<int> nodeReverse = [];
+    print('Informe o nó que deseja inserir no percuso In Order');
+
+    try {
+      nodes = stdin.readLineSync()!.split(' ');
+    } catch (e) {
+      print('Valor informado é inválido');
+    }
+
+    for (var elements in nodes) {
+      nodeReverse.add(int.parse(elements));
+    }
+
+    nodeReverse.shuffle();
+
+    for (var i = 0; i < nodes.length; i++) {
+      if (i == 0) {
+        _root = BinaryTree(root: Node(value: nodeReverse[0]));
+      } else {
+        _root.insertNode(Node(value: nodeReverse[i]), _root.getNode());
+      }
+    }
+  }
+
+  void imprimirTree() {
+    _root.printTree(_root.getNode());
+  }
 }

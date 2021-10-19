@@ -3,6 +3,8 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
+import 'dart:io';
+
 import 'package:arvore_binaria/classes/classes.dart';
 
 import 'dart:math' as math;
@@ -16,6 +18,8 @@ class BinaryTree {
   Node getNode() {
     return root;
   }
+
+  int nivel = 0;
 
   void insertNode(Node newNode, Node? root) {
     if (newNode.value > root!.value) {
@@ -77,7 +81,7 @@ class BinaryTree {
       return;
     }
     inOrder(root.left);
-    print(' ${root.value} ');
+    stdout.write(' ${root.value} ');
     inOrder(root.right);
   }
 
@@ -86,7 +90,7 @@ class BinaryTree {
     if (root == null) {
       return;
     } else {
-      print(' ${root.value} ');
+      stdout.write(' ${root.value} ');
       preOrder(root.left);
       preOrder(root.right);
     }
@@ -99,7 +103,7 @@ class BinaryTree {
     }
     postOrder(root.left);
     postOrder(root.right);
-    print(' ${root.value} ');
+    stdout.write(' ${root.value} ');
   }
 
   void isExist(int value) {
@@ -117,6 +121,28 @@ class BinaryTree {
       }
     } else {
       print('O nó $value não existe na Árvore');
+    }
+  }
+
+  void getNivel(int elemento) {
+    var nivel = 0;
+    nivelRecursive(root, elemento, nivel);
+  }
+
+  void nivelRecursive(dynamic no, int elemento, int nivel) {
+    if (no == null || no.value == elemento) {
+      if (no != null) {
+        this.nivel = nivel;
+      }
+    }
+
+    if (no != null) {
+      if (no.value > elemento) {
+        nivel++;
+        nivelRecursive(no.left, elemento, nivel);
+      }
+      nivel++;
+      nivelRecursive(no.right, elemento, nivel);
     }
   }
 
@@ -234,5 +260,20 @@ class BinaryTree {
       node.right = newRight;
       reverseTreeRecursive(node.left);
     }
+  }
+
+  void printTree(Node? node) {
+    if (node == null) {
+      return;
+    }
+
+    printTree(node.right);
+    getNivel(node.value);
+    for (var i = 0; i < nivel; i++) {
+      stdout.write('\t');
+    }
+    stdout.write(' ${node.value}\n');
+
+    printTree(node.left);
   }
 }

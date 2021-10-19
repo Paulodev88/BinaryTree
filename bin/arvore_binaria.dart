@@ -10,17 +10,20 @@ void main(List<String> arguments) {
     print('\n         ::::   Arvóre Genérica   ::::\n');
     print('::         Escolha uma opção de 0 a 12        ::\n');
     print('::     1  - Gerar Árvore                      ::');
-    print('::     2  - Imprimir Árvore Pós-Ordem LRN     ::');
-    print('::     3  - Imprimir Árvore Pré-Ordem NLR     ::');
-    print('::     4  - Imprimir Árvore In-Ordem  LNR     ::');
-    print('::     5  - Imprimir o Grau                   ::');
-    print('::     6  - Imprimir a Profundidade           ::');
-    print('::     7  - Imprimir os Níveis                ::');
-    print('::     8  - Imprimir Altura                   ::');
-    print('::     9  - Imprimir quantidade de Nó         ::');
-    print('::     10 - Verificar Elemento                ::');
-    print('::     11 - Remover um Elemento               ::');
-    print('::     12 - Reveter Árvore                    ::');
+    print('::     2  - Gerar Árvore Pós-Ordem LRN     ::');
+    print('::     3  - Gerar Árvore Pré-Ordem NLR     ::');
+    print('::     4  - Gerar Árvore In-Ordem  LNR     ::');
+    print('::     5  - Imprimir Árvore Pós-Ordem LRN     ::');
+    print('::     6  - Imprimir Árvore Pré-Ordem NLR     ::');
+    print('::     7  - Imprimir Árvore In-Ordem  LNR     ::');
+    print('::     8  - Imprimir o Grau                   ::');
+    print('::     9  - Imprimir a Profundidade           ::');
+    print('::     10 - Imprimir os Níveis                ::');
+    print('::     11 - Imprimir Altura                   ::');
+    print('::     12 - Imprimir quantidade de Nó         ::');
+    print('::     13 - Verificar Elemento                ::');
+    print('::     14 - Remover um Elemento               ::');
+    print('::     15 - Reveter Árvore                    ::');
     print('::     0  - Finalizar Programa                ::\n');
 
     try {
@@ -34,37 +37,49 @@ void main(List<String> arguments) {
         controller.getGenerate();
         break;
       case 2:
-        controller.getPostOrder();
+        controller.insertPosOrder();
         break;
       case 3:
-        controller.getPreOrder();
+        controller.insertPreOrder();
         break;
       case 4:
-        controller.getInOrder();
+        controller.insertInOrder();
         break;
       case 5:
-        controller.getDegree();
+        controller.getPostOrder();
         break;
       case 6:
-        controller.getDepth();
+        controller.getPreOrder();
         break;
       case 7:
-        controller.getNivel();
+        controller.getInOrder();
         break;
       case 8:
-        controller.getHeight();
+        controller.getDegree();
         break;
       case 9:
-        controller.getCount();
+        controller.getDepth();
         break;
       case 10:
-        controller.getElement();
+        controller.getNivel();
         break;
       case 11:
-        controller.removeNode();
+        controller.getHeight();
         break;
       case 12:
+        controller.getCount();
+        break;
+      case 13:
+        controller.getElement();
+        break;
+      case 14:
+        controller.removeNode();
+        break;
+      case 15:
         controller.getReverse();
+        break;
+      case 16:
+        controller.imprimirTree();
         break;
       case 0:
         print('Saindo ....');
