@@ -24,6 +24,7 @@ void main(List<String> arguments) {
     print('::     13 - Verificar Elemento                ::');
     print('::     14 - Remover um Elemento               ::');
     print('::     15 - Reveter Árvore                    ::');
+    print('::     16 - Imprimir Árvore                    ::');
     print('::     0  - Finalizar Programa                ::\n');
 
     try {
