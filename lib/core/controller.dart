@@ -135,7 +135,8 @@ class Controller {
 
   void getNivel() {
     print('\nInforme o valor do nó que deseja ver o nivel :');
-    _root.getDepth(insertNumber());
+    _root.getNivel(insertNumber());
+    print('O nivel do do elemento é: ${_root.nivel}');
   }
 
   void getHeight() {
