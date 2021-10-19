@@ -8,11 +8,11 @@ void main(List<String> arguments) {
 
   do {
     print('\n         ::::   Arvóre Genérica   ::::\n');
-    print('::         Escolha uma opção de 0 a 12        ::\n');
+    print('::         Escolha uma opção de 0 a 16        ::\n');
     print('::     1  - Gerar Árvore                      ::');
-    print('::     2  - Gerar Árvore Pós-Ordem LRN     ::');
-    print('::     3  - Gerar Árvore Pré-Ordem NLR     ::');
-    print('::     4  - Gerar Árvore In-Ordem  LNR     ::');
+    print('::     2  - Gerar Árvore Pós-Ordem LRN        ::');
+    print('::     3  - Gerar Árvore Pré-Ordem NLR        ::');
+    print('::     4  - Gerar Árvore In-Ordem  LNR        ::');
     print('::     5  - Imprimir Árvore Pós-Ordem LRN     ::');
     print('::     6  - Imprimir Árvore Pré-Ordem NLR     ::');
     print('::     7  - Imprimir Árvore In-Ordem  LNR     ::');
@@ -24,7 +24,7 @@ void main(List<String> arguments) {
     print('::     13 - Verificar Elemento                ::');
     print('::     14 - Remover um Elemento               ::');
     print('::     15 - Reveter Árvore                    ::');
-    print('::     16 - Imprimir Árvore                    ::');
+    print('::     16 - Imprimir Árvore                   ::');
     print('::     0  - Finalizar Programa                ::\n');
 
     try {

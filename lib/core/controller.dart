@@ -244,6 +244,7 @@ class Controller {
   }
 
   void imprimirTree() {
+    print('Arvore Binaria de Busca:: ');
     _root.printTree(_root.getNode());
   }
 }
