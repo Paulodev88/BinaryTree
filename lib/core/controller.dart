@@ -195,8 +195,7 @@ class Controller {
 
   void insertPreOrder() {
     List<String> nodes = [];
-    List<int> nodesPosOrder = [];
-    List<int> nodeReverse = [];
+    List<int> nodesPreOrder = [];
     print('Informe o nó que deseja inserir no percuso Pre Order');
 
     try {
@@ -206,15 +205,14 @@ class Controller {
     }
 
     for (var elements in nodes) {
-      nodesPosOrder.add(int.parse(elements));
+      nodesPreOrder.add(int.parse(elements));
     }
 
-    nodeReverse = nodesPosOrder.reversed.toList();
-    for (var i = 0; i < nodesPosOrder.length; i++) {
+    for (var i = 0; i < nodesPreOrder.length; i++) {
       if (i == 0) {
-        _root = BinaryTree(root: Node(value: nodeReverse[0]));
+        _root = BinaryTree(root: Node(value: nodesPreOrder[0]));
       } else {
-        _root.insertNode(Node(value: nodeReverse[i]), _root.getNode());
+        _root.insertNode(Node(value: nodesPreOrder[i]), _root.getNode());
       }
     }
   }
